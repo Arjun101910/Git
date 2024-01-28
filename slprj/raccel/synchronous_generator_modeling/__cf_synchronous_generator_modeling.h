@@ -1,0 +1,3 @@
+#ifndef CF_synchronous_generator_modeling_H__
+#define CF_synchronous_generator_modeling_H__
+#endif
