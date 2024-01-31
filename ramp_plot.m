@@ -8,6 +8,7 @@ y_array=zeros(1,10)
 %% 
 % logic code
 
+
 for i=1:10:90
        
     y_array(i)=sin(i*180/pi)
