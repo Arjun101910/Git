@@ -1,8 +1,11 @@
-clear;
-dt=2e-3;
-ns=[0  1];
-ds=[.03  10];
-as=tf(ns,ds);
-zbi=c2d(as,dt,'tustin');%s domain transfer function%c2d command makes continuous to discrete
-zfh=c2d(as,dt,'foh');%z domain transfer function using bilinear 
-zzh=c2d(as,dt,'zoh');%z domain transfer function using zero order
+t = 0:0.1:10;
+h = ones(1,11);
+x = power(0.5,t);
+y = conv(x,h);
+subplot(3,1,1);
+plot(t, x);
+title('Continuous Time Convolutions (077BEL010 Arjun Oli)'); ylabel('x(t)');
+
+subplot(3,1,2); plot(h); ylabel('h(t)');
+subplot(3,1,3); plot(y); ylabel('y(t)');
+xlabel('time');
